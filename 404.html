@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 		<script>
 			var url = ( 
 				(window.location.href.startsWith("https://b"))
 					? window.location.href.split("luk/",2)[1]
 					: window.location.href
-			 );
-			 console.log(url);
+			);
+			console.log(url);
+			function baslat() {
+				let istek = $.get(`https://eksisozluk.com/${url}`);
+				console.log(istek);
+
+			}
+
+
 		</script>
 	</head>
 	
-	<body>
+	<body onload="baslat();">
 		<noscript>Sitenin çalışması için JavaScript'in açık olması gerekiyor.</noscript>
 
 		

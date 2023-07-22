@@ -10,7 +10,11 @@
 			);
 			console.log(url);
 			function baslat() {
-				let istek = $.get(`https://eksisozluk.com/${url}`);
+				let istek = $.get(`https://eksisozluk.com/${url}`,
+				function(data) {
+					console.log(data);
+					
+				});
 				console.log(istek);
 
 			}
